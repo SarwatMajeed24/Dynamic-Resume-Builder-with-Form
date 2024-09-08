@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Resume Builder</h2>
+            <form id="resume-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="contact">Contact #:</label>
+                    <input type="text" id="contact" name="contact" required>
+                    
+                    <label for="profile-pic-upload">Profile Picture:</label>
+                    <input type="file" id="profile-pic-upload" name="profile-pic-upload" accept="image/*">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Education</legend>
+                    <div id="education-fields">
+                        <div class="education-entry">
+                            <label for="edu-school-1">Institute:</label>
+                            <input type="text" id="edu-institute-1" name="edu-institute" required>
+
+                            <label for="edu-degree-1">Degree:</label>
+                            <input type="text" id="edu-degree-1" name="edu-degree" required>
+
+                            <label for="edu-year-1">Year:</label>
+                            <input type="text" id="edu-year-1" name="edu-year" required>
+                        </div>
+                    </div>
+                    <button type="button" id="add-education">Add More Education</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <div id="work-experience-fields">
+                        <div class="work-experience-entry">
+                            <label for="work-company-1">Company:</label>
+                            <input type="text" id="work-company-1" name="work-company" required>
+
+                            <label for="work-role-1">Role:</label>
+                            <input type="text" id="work-role-1" name="work-role" required>
+
+                            <label for="work-period-1">Period:</label>
+                            <input type="text" id="work-period-1" name="work-period" required>
+                        </div>
+                    </div>
+                    <button type="button" id="add-work-experience">Add More Work Experience</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Skills</legend>
+                    <textarea id="skills" name="skills" placeholder="List your skills, separated by commas" required></textarea>
+                </fieldset>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <div class="resume-container" id="resume-container">
+            <!-- Resume will be dynamically generated here -->
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
